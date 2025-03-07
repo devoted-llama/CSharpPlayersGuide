@@ -17,8 +17,17 @@ namespace Helper {
             do {
                 Console.WriteLine("Choose one of the following: ");
                 foreach (string t in Enum.GetNames(typeof(T))) {
-                    Console.WriteLine($"{t}");
+                    Console.Write($"{t} ");
                 }
+                Console.Write("\n");
+            } while (!Enum.TryParse(typeof(T), Console.ReadLine(), out val));
+            return (T)val;
+        }
+
+        public static T GetEnumValueFromUserWithoutText<T>() where T : Enum {
+            object val;
+            do {
+
             } while (!Enum.TryParse(typeof(T), Console.ReadLine(), out val));
             return (T)val;
         }
