@@ -1,78 +1,78 @@
 using System;
+using System.Linq.Expressions;
+using System.Windows.Input;
 
 namespace TheFountainOfObjects;
 
 public class Game {
-    public Position PlayerPosition { get; private set; }
+    Position _playerPosition;
+    public Position PlayerPosition { 
+        get => _playerPosition; 
+        set {
+            if(value.X >= 0 && value.X < Cavern.Width && value.Y >= 0 && value.Y < Cavern.Height) {
+                _playerPosition = value;
+            }
+        } 
+    }
     public Cavern Cavern { get; }
 
-    private bool _fountainActive = false;
+    public bool FountainActive {get;set;} = false;
     private bool _hasWon = false;
     public Room? CurrentRoom {get {
         return Cavern.GetRoom(PlayerPosition);
     }}
 
+    IGameCommand _gameCommand;
+
     public Game () {
-        PlayerPosition = new Position(0,0);
         Cavern = new Cavern(3,3,new[] { 
             new Room(new Position(0,0),RoomType.Entrance,"You see light coming from the cavern entrance."),
             new Room(new Position(2,0),RoomType.FountainOfObjects,"You hear water dripping in this room. The Fountain of Objects is here!")
         });
+        PlayerPosition = new Position(0,0);
     }
 
     public void Run () {
-        var input = "";
-        string command = "";
-        Direction direction;
-        string[] inputs;
-
         do {
             Console.WriteLine($"You are in the cavern at {(PlayerPosition.X,PlayerPosition.Y)}");
             DoWinCheck();
-            ReadRoom();
+            
             if(_hasWon) {
-                Console.WriteLine("You win!");
                 return;
             } else { 
+                ReadRoom();
                 Console.Write("What do you want to do? ");
-                input = Console.ReadLine();
-                
-                if(input != null) {
-                    inputs = input.Split(" ");
-                    command = inputs[0];
-
-                    if(command == "move" && inputs.Length > 1) {
-                        bool gotDirection = Enum.TryParse<Direction>(inputs[1],true,out direction);
-                        if(gotDirection) {
-                            Move(direction);
-                        }
-                    } else if (input == "enable fountain") {
-                        ActivateFountain();
-                    }
-                }
+                GetCommand();
+                RunCommand();
             }
-            
-        } while(command != "exit");
+        } while(true);
+    }
+
+    void GetCommand() {
+        var input = Console.ReadLine();
+        switch(input) {
+            case "move north": _gameCommand = new MoveNorthCommand(); break;
+            case "move east": _gameCommand = new MoveEastCommand(); break;
+            case "move south": _gameCommand = new MoveSouthCommand(); break;
+            case "move west": _gameCommand = new MoveWestCommand(); break;
+            case "enable fountain": _gameCommand = new EnableFountainCommand(); break;
+            case "exit" : _gameCommand = new ExitCommand(); break;
+        }
+    }
+
+    void RunCommand() {
+        _gameCommand.Run(this);
     }
 
     void DoWinCheck() {
-        if(!_hasWon && _fountainActive && CurrentRoom?.RoomType == RoomType.Entrance) {
+        if(!_hasWon && FountainActive && CurrentRoom?.RoomType == RoomType.Entrance) {
             _hasWon = true;
-            CurrentRoom.Description = "The Fountain of Objects has been reactivated, and you have escaped with your life!";
+            Console.WriteLine("The Fountain of Objects has been reactivated, and you have escaped with your life!");
+            Console.WriteLine("You win!");
         }
     }
 
-    void ActivateFountain() {
-        if(!_fountainActive && CurrentRoom?.RoomType == RoomType.FountainOfObjects) {
-            CurrentRoom.Description = "You hear the rushing waters from The Fountain of Objects. It has been reactivated!";
-            _fountainActive = true;
-        } else if(!_fountainActive && CurrentRoom?.RoomType != RoomType.FountainOfObjects) {
-            Console.WriteLine("You are not near The Fountain of Objects; you cannot activate it here.");
-        } else if(_fountainActive) {
-            Console.WriteLine("The Fountain of Objects is already active!");
-        }
-    }
-     void Move(Direction direction) {
+    public void Move(Direction direction) {
         Position newPosition;
         switch(direction) {
             case Direction.north : newPosition = new Position(PlayerPosition.X, PlayerPosition.Y-1); break;
