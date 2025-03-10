@@ -1,3 +1,3 @@
 namespace TheFountainOfObjects;
 
-public enum RoomType {None, Entrance, FountainOfObjects}
+public enum RoomType {None, Entrance, FountainOfObjects, Amarok}

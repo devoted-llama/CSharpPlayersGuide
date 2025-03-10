@@ -23,6 +23,20 @@ public class Cavern {
         return null;
     }
 
+    public Room[] Get8AdjacentRooms(Position position) {
+        Room[] rooms = new Room[8];
+        int i = 0;
+        for(int x = 0;x < Width; x++) {
+            for(int y = 0; y < Height; y ++) {
+                if(((x == position.X+1 || x == position.X || x == position.X-1) && (y == position.Y+1 || y == position.Y-1)) ||
+                    ((x == position.X+1 || x == position.X-1) && (y == position.Y+1 || y == position.Y || y == position.Y-1))) {
+                    rooms[i++] = _rooms[x,y];
+                }
+            }
+        }
+        return rooms;
+    }
+
     void CreateRooms(Room[] specialRooms) {
         Position position;
         for(int x = 0;x < Width; x++) {
