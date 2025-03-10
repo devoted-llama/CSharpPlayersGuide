@@ -3,31 +3,40 @@ using System;
 namespace TheFountainOfObjects;
 
 public class Cavern {
-    public Room[,] Rooms { get; private set; }
+    
+     
+    Room[,] _rooms;
     public int Width { get; }
     public int Height { get ; }
 
     public Cavern(int width, int height, Room[] specialRooms) {
         Width = width;
         Height = height;
+        _rooms = new Room[Width,Height];
         CreateRooms(specialRooms);
     }
 
+    public Room? GetRoom(Position position) {
+        int x = position.X; int y = position.Y;
+        if(position.X >= 0 && position.X < Width && position.Y >= 0 && position.Y < Height)
+            return _rooms[x,y];
+        return null;
+    }
+
     void CreateRooms(Room[] specialRooms) {
-        Rooms = new Room[Width,Height];
-        (int,int) coordinates;
+        Position position;
         for(int x = 0;x < Width; x++) {
             for(int y = 0; y < Height; y ++) {
-                coordinates = (x,y);
-                Room room = new Room(coordinates);
+                position = new Position(x,y);
+                Room room = new Room(position);
 
                 foreach (Room sr in specialRooms) {
-                    if(sr.Coordinates == coordinates) {
+                    if(sr.Position.Equals(position)) {
                         room = sr;
                     }
                 }
                 
-                Rooms[x,y] = room;
+                _rooms[x,y] = room;
             }
         }
     }
