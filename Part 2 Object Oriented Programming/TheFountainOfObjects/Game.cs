@@ -23,7 +23,9 @@ public class Game {
         return Cavern.GetRoom(PlayerPosition);
     }}
 
-    IGameCommand _gameCommand;
+    public int ArrowCount {get;set;} = 5;
+
+    IGameCommand? _gameCommand;
 
     public Game () {
         Cavern = new Cavern(3,3,new[] { 
@@ -36,7 +38,7 @@ public class Game {
 
     public void Run () {
         do {
-            Console.WriteLine($"You are in the cavern at {(PlayerPosition.X,PlayerPosition.Y)}");
+            Console.WriteLine($"You are in the cavern at {(PlayerPosition.X,PlayerPosition.Y)} with {ArrowCount} arrows.");
             DoWinCheck();
             DoLoseCheck();
             if(_hasWon || _hasLost) {
@@ -54,17 +56,21 @@ public class Game {
     void GetCommand() {
         var input = Console.ReadLine();
         switch(input) {
-            case "move north": _gameCommand = new MoveNorthCommand(); break;
-            case "move east": _gameCommand = new MoveEastCommand(); break;
-            case "move south": _gameCommand = new MoveSouthCommand(); break;
-            case "move west": _gameCommand = new MoveWestCommand(); break;
+            case "move north": _gameCommand = new MoveCommand(new Position(0,-1)); break;
+            case "move east" : _gameCommand = new MoveCommand(new Position(1,0)); break;
+            case "move south": _gameCommand = new MoveCommand(new Position(0,1)); break;
+            case "move west" : _gameCommand = new MoveCommand(new Position(-1,0)); break;
+            case "shoot north": _gameCommand = new ShootCommand(new Position(0,-1)); break;
+            case "shoot east" : _gameCommand = new ShootCommand(new Position(1,0)); break;
+            case "shoot south": _gameCommand = new ShootCommand(new Position(0,1)); break;
+            case "shoot west" : _gameCommand = new ShootCommand(new Position(-1,0)); break;
             case "enable fountain": _gameCommand = new EnableFountainCommand(); break;
             case "exit" : _gameCommand = new ExitCommand(); break;
         }
     }
 
     void RunCommand() {
-        _gameCommand.Run(this);
+        _gameCommand?.Run(this);
     }
 
     void DoWinCheck() {
@@ -87,7 +93,7 @@ public class Game {
     void DoLoseCheck() {
         if(CurrentRoom?.RoomType == RoomType.Amarok) {
             _hasLost = true;
-            Console.WriteLine("You were eaten by an Amarok.");
+            Console.WriteLine("You are eaten by an Amarok.");
         }
     }
 
