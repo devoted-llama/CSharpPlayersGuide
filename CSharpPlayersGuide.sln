@@ -3,89 +3,89 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.810.25
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheOldRobot", "Part 2 Object Oriented Programming\TheOldRobot\TheOldRobot.csproj", "{990AD07E-8FD1-42A1-9295-85DDA56ABAAE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheOldRobot", "Part2-ObjectOrientedProgramming\TheOldRobot\TheOldRobot.csproj", "{990AD07E-8FD1-42A1-9295-85DDA56ABAAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bread", "Part 1 The Basics\Bread\Bread.csproj", "{FAF96521-ED50-4A1C-B58E-20597C210B82}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bread", "Part1-TheBasics\Bread\Bread.csproj", "{FAF96521-ED50-4A1C-B58E-20597C210B82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuyingInventory", "Part 1 The Basics\BuyingInventory\BuyingInventory.csproj", "{6B8F982C-6A5F-44B4-9AD5-E269CB73312E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuyingInventory", "Part1-TheBasics\BuyingInventory\BuyingInventory.csproj", "{6B8F982C-6A5F-44B4-9AD5-E269CB73312E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clocktower", "Part 1 The Basics\Clocktower\Clocktower.csproj", "{103AB8E5-6738-4C42-9C23-B9DBCE21B3A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clocktower", "Part1-TheBasics\Clocktower\Clocktower.csproj", "{103AB8E5-6738-4C42-9C23-B9DBCE21B3A6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part 1 The Basics", "Part 1 The Basics", "{8D43636B-9CF0-4D45-A7B3-6B651BD7E9D6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part1-TheBasics", "Part1-TheBasics", "{8D43636B-9CF0-4D45-A7B3-6B651BD7E9D6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part 2 Object Oriented Programming", "Part 2 Object Oriented Programming", "{26BA22ED-BA79-47C6-BCDF-18FB8D422925}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part2-ObjectOrientedProgramming", "Part2-ObjectOrientedProgramming", "{26BA22ED-BA79-47C6-BCDF-18FB8D422925}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countdown", "Part 1 The Basics\Countdown\Countdown.csproj", "{D6C3314F-2694-43A6-9D10-ACE5660B3FD9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Countdown", "Part1-TheBasics\Countdown\Countdown.csproj", "{D6C3314F-2694-43A6-9D10-ACE5660B3FD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefenceOfConsolas", "Part 1 The Basics\DefenceOfConsolas\DefenceOfConsolas.csproj", "{6EBDD329-2983-41F1-A816-6BD5696BE3BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefenceOfConsolas", "Part1-TheBasics\DefenceOfConsolas\DefenceOfConsolas.csproj", "{6EBDD329-2983-41F1-A816-6BD5696BE3BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountedInventory", "Part 1 The Basics\DiscountedInventory\DiscountedInventory.csproj", "{C9A1A5A4-5046-431F-AE76-CE13080EBB6E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountedInventory", "Part1-TheBasics\DiscountedInventory\DiscountedInventory.csproj", "{C9A1A5A4-5046-431F-AE76-CE13080EBB6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "Part 1 The Basics\HelloWorld\HelloWorld.csproj", "{91E74223-3F0A-4759-8E50-11F9A918E9C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "Part1-TheBasics\HelloWorld\HelloWorld.csproj", "{91E74223-3F0A-4759-8E50-11F9A918E9C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DominionOfKings", "Part 1 The Basics\DominionOfKings\DominionOfKings.csproj", "{8E055EB0-4483-49FF-BA03-07B91299DD22}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DominionOfKings", "Part1-TheBasics\DominionOfKings\DominionOfKings.csproj", "{8E055EB0-4483-49FF-BA03-07B91299DD22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourSisters", "Part 1 The Basics\FourSisters\FourSisters.csproj", "{98B0A884-6794-406D-B3E5-C8F02180AC9F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourSisters", "Part1-TheBasics\FourSisters\FourSisters.csproj", "{98B0A884-6794-406D-B3E5-C8F02180AC9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuntingTheManticore", "Part 1 The Basics\HuntingTheManticore\HuntingTheManticore.csproj", "{277FAC6D-B19C-4163-9A74-46AEC402A4A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HuntingTheManticore", "Part1-TheBasics\HuntingTheManticore\HuntingTheManticore.csproj", "{277FAC6D-B19C-4163-9A74-46AEC402A4A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakingANumber", "Part 1 The Basics\TakingANumber\TakingANumber.csproj", "{DE8E0813-70F9-4B48-B4A5-108839D07071}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TakingANumber", "Part1-TheBasics\TakingANumber\TakingANumber.csproj", "{DE8E0813-70F9-4B48-B4A5-108839D07071}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLawsOfFreach", "Part 1 The Basics\TheLawsOfFreach\TheLawsOfFreach.csproj", "{C6660D28-D7B7-4696-97CF-6AE10C0BFCB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLawsOfFreach", "Part1-TheBasics\TheLawsOfFreach\TheLawsOfFreach.csproj", "{C6660D28-D7B7-4696-97CF-6AE10C0BFCB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMagicCannon", "Part 1 The Basics\TheMagicCannon\TheMagicCannon.csproj", "{D4AF6486-1126-4C3C-B977-7EAF7211D626}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheMagicCannon", "Part1-TheBasics\TheMagicCannon\TheMagicCannon.csproj", "{D4AF6486-1126-4C3C-B977-7EAF7211D626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePrototype", "Part 1 The Basics\ThePrototype\ThePrototype.csproj", "{8F4D0229-5359-4FB1-923C-3C332CFCF614}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePrototype", "Part1-TheBasics\ThePrototype\ThePrototype.csproj", "{8F4D0229-5359-4FB1-923C-3C332CFCF614}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheReplicatorOfDTo", "Part 1 The Basics\TheReplicatorOfDTo\TheReplicatorOfDTo.csproj", "{06E44FCE-0FEB-4803-AF77-8DE54636441E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheReplicatorOfDTo", "Part1-TheBasics\TheReplicatorOfDTo\TheReplicatorOfDTo.csproj", "{06E44FCE-0FEB-4803-AF77-8DE54636441E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheTriangleFarmer", "Part 1 The Basics\TheTriangleFarmer\TheTriangleFarmer.csproj", "{8D2DFC37-F419-459C-ABAA-2FE71A623B8D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheTriangleFarmer", "Part1-TheBasics\TheTriangleFarmer\TheTriangleFarmer.csproj", "{8D2DFC37-F419-459C-ABAA-2FE71A623B8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThingNamer", "Part 1 The Basics\ThingNamer\ThingNamer.csproj", "{C6325483-01E1-4CC7-9B44-EE7B334E7056}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThingNamer", "Part1-TheBasics\ThingNamer\ThingNamer.csproj", "{C6325483-01E1-4CC7-9B44-EE7B334E7056}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariableShop", "Part 1 The Basics\VariableShop\VariableShop.csproj", "{F78D6BBE-D207-4519-AFB5-2ADC9E941454}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariableShop", "Part1-TheBasics\VariableShop\VariableShop.csproj", "{F78D6BBE-D207-4519-AFB5-2ADC9E941454}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchTower", "Part 1 The Basics\WatchTower\WatchTower.csproj", "{A7A6D31B-D947-4E57-B058-75324C3FC591}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchTower", "Part1-TheBasics\WatchTower\WatchTower.csproj", "{A7A6D31B-D947-4E57-B058-75324C3FC591}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrowFactories", "Part 2 Object Oriented Programming\ArrowFactories\ArrowFactories.csproj", "{62ACE117-F26A-4F6C-887A-38AEDBEB02C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrowFactories", "Part2-ObjectOrientedProgramming\ArrowFactories\ArrowFactories.csproj", "{62ACE117-F26A-4F6C-887A-38AEDBEB02C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Part 2 Object Oriented Programming\Helper\Helper.csproj", "{4342974F-4577-4AC8-86FC-91C73792A259}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helper", "Part2-ObjectOrientedProgramming\Helper\Helper.csproj", "{4342974F-4577-4AC8-86FC-91C73792A259}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabellingInventory", "Part 2 Object Oriented Programming\LabellingInventory\LabellingInventory.csproj", "{90B12E2F-641D-4E86-8527-A052650165B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabellingInventory", "Part2-ObjectOrientedProgramming\LabellingInventory\LabellingInventory.csproj", "{90B12E2F-641D-4E86-8527-A052650165B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulasSoups", "Part 2 Object Oriented Programming\SimulasSoups\SimulasSoups.csproj", "{7C30ADAE-9DCB-4204-B117-3F7CCE01E528}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulasSoups", "Part2-ObjectOrientedProgramming\SimulasSoups\SimulasSoups.csproj", "{7C30ADAE-9DCB-4204-B117-3F7CCE01E528}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulasTest", "Part 2 Object Oriented Programming\SimulasTest\SimulasTest.csproj", "{0A8AD75F-F18F-48B3-AEDF-AC061695BA2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimulasTest", "Part2-ObjectOrientedProgramming\SimulasTest\SimulasTest.csproj", "{0A8AD75F-F18F-48B3-AEDF-AC061695BA2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheCard", "Part 2 Object Oriented Programming\TheCard\TheCard.csproj", "{7A600E28-F2C5-46B5-A3BE-F7B94B202C99}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheCard", "Part2-ObjectOrientedProgramming\TheCard\TheCard.csproj", "{7A600E28-F2C5-46B5-A3BE-F7B94B202C99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheColour", "Part 2 Object Oriented Programming\TheColour\TheColour.csproj", "{3776F0F2-8140-40A2-8FD5-5AD6D2A71B75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheColour", "Part2-ObjectOrientedProgramming\TheColour\TheColour.csproj", "{3776F0F2-8140-40A2-8FD5-5AD6D2A71B75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLockedDoor", "Part 2 Object Oriented Programming\TheLockedDoor\TheLockedDoor.csproj", "{831D91EA-B59C-42A8-AE56-7D60270BC703}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheLockedDoor", "Part2-ObjectOrientedProgramming\TheLockedDoor\TheLockedDoor.csproj", "{831D91EA-B59C-42A8-AE56-7D60270BC703}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePasswordValidator", "Part 2 Object Oriented Programming\ThePasswordValidator\ThePasswordValidator.csproj", "{5BD16DCF-1D1E-45AB-B66D-5B7F3422430E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePasswordValidator", "Part2-ObjectOrientedProgramming\ThePasswordValidator\ThePasswordValidator.csproj", "{5BD16DCF-1D1E-45AB-B66D-5B7F3422430E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePoint", "Part 2 Object Oriented Programming\ThePoint\ThePoint.csproj", "{848EAF52-5BCF-460F-8C31-B8A882F7106C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePoint", "Part2-ObjectOrientedProgramming\ThePoint\ThePoint.csproj", "{848EAF52-5BCF-460F-8C31-B8A882F7106C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePropertyOfArrows", "Part 2 Object Oriented Programming\ThePropertyOfArrows\ThePropertyOfArrows.csproj", "{5FBCCCFC-736C-4F97-B6C9-1600E33D29A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThePropertyOfArrows", "Part2-ObjectOrientedProgramming\ThePropertyOfArrows\ThePropertyOfArrows.csproj", "{5FBCCCFC-736C-4F97-B6C9-1600E33D29A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VinFletchersArrows", "Part 2 Object Oriented Programming\VinFletchersArrows\VinFletchersArrows.csproj", "{58E14611-76B5-45A5-9519-12E059604C52}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VinFletchersArrows", "Part2-ObjectOrientedProgramming\VinFletchersArrows\VinFletchersArrows.csproj", "{58E14611-76B5-45A5-9519-12E059604C52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VinsTrouble", "Part 2 Object Oriented Programming\VinsTrouble\VinsTrouble.csproj", "{E9312096-DD7A-453A-81B1-DDCD74591256}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VinsTrouble", "Part2-ObjectOrientedProgramming\VinsTrouble\VinsTrouble.csproj", "{E9312096-DD7A-453A-81B1-DDCD74591256}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackingInventory", "Part 2 Object Oriented Programming\PackingInventory\PackingInventory.csproj", "{0F058332-990A-4BA9-8F25-1B0C6440831B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackingInventory", "Part2-ObjectOrientedProgramming\PackingInventory\PackingInventory.csproj", "{0F058332-990A-4BA9-8F25-1B0C6440831B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "Part 2 Object Oriented Programming\TicTacToe\TicTacToe.csproj", "{89599BCE-8666-4287-978A-33D9E33DA0F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "Part2-ObjectOrientedProgramming\TicTacToe\TicTacToe.csproj", "{89599BCE-8666-4287-978A-33D9E33DA0F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboticInterface", "Part 2 Object Oriented Programming\RoboticInterface\RoboticInterface.csproj", "{CAB4452F-4E8B-4D46-82DB-DDA33D82689C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoboticInterface", "Part2-ObjectOrientedProgramming\RoboticInterface\RoboticInterface.csproj", "{CAB4452F-4E8B-4D46-82DB-DDA33D82689C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomCoordinates", "Part 2 Object Oriented Programming\RoomCoordinates\RoomCoordinates.csproj", "{6582FC99-9C1C-4FD8-AA87-67771344CADF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomCoordinates", "Part2-ObjectOrientedProgramming\RoomCoordinates\RoomCoordinates.csproj", "{6582FC99-9C1C-4FD8-AA87-67771344CADF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarPreparations", "Part 2 Object Oriented Programming\WarPreparations\WarPreparations.csproj", "{307358BE-E0DB-40CF-808C-5BF647FE5724}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarPreparations", "Part2-ObjectOrientedProgramming\WarPreparations\WarPreparations.csproj", "{307358BE-E0DB-40CF-808C-5BF647FE5724}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColouredItems", "Part 2 Object Oriented Programming\ColouredItems\ColouredItems.csproj", "{42317B4A-9C45-4FCB-A5FC-FDDE2A929B52}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColouredItems", "Part2-ObjectOrientedProgramming\ColouredItems\ColouredItems.csproj", "{42317B4A-9C45-4FCB-A5FC-FDDE2A929B52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheFountainOfObjects", "Part 2 Object Oriented Programming\TheFountainOfObjects\TheFountainOfObjects.csproj", "{4C4FE5BB-E010-4D8C-9EA2-EFD660DF71D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheFountainOfObjects", "Part2-ObjectOrientedProgramming\TheFountainOfObjects\TheFountainOfObjects.csproj", "{4C4FE5BB-E010-4D8C-9EA2-EFD660DF71D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
