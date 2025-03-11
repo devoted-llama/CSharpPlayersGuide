@@ -7,7 +7,8 @@ namespace HuntingTheManticore {
             int cHealth = 15, cHealthMax = 15;
             int round = 0;
 
-            int mDistance = AskForNumberInRange("Player 1, how far away from the city do you want to station the Manticore? ", 0, 100);
+            Random random = new Random();
+            int mDistance = random.Next(0, 100);
 
             Console.Clear();
 
