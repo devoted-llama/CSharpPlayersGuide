@@ -19,6 +19,8 @@ public class Game {
     public bool FountainActive {get;set;} = false;
     private bool _hasWon = false;
     private bool _hasLost= false;
+
+    private DateTime _startTime;
     public Room? CurrentRoom {get {
         return Cavern.GetRoom(PlayerPosition);
     }}
@@ -37,13 +39,14 @@ public class Game {
     }
 
     public void Run () {
+        DoStartUpAction();
         do {
             Console.WriteLine($"You are in the cavern at {(PlayerPosition.X,PlayerPosition.Y)} with {ArrowCount} arrows.");
             DoWinCheck();
             DoLoseCheck();
             if(_hasWon || _hasLost) {
-                return;
-            } else { 
+                DoGameEndAction();
+            } else {
                 ReadRoom();
                 SenseAdjacentRooms();
                 Console.Write("What do you want to do? ");
@@ -51,6 +54,16 @@ public class Game {
                 RunCommand();
             }
         } while(true);
+    }
+
+    void DoStartUpAction() {
+        _startTime = DateTime.Now;
+    }
+
+    void DoGameEndAction () {
+        TimeSpan elapsedTime = DateTime.Now - _startTime;
+        Console.WriteLine($"You spent a total of {(int)elapsedTime.TotalSeconds} seconds in the cavern.");
+        Environment.Exit(0);
     }
 
     void GetCommand() {
@@ -66,6 +79,7 @@ public class Game {
             case "shoot west" : _gameCommand = new ShootCommand(new Position(-1,0)); break;
             case "enable fountain": _gameCommand = new EnableFountainCommand(); break;
             case "exit" : _gameCommand = new ExitCommand(); break;
+            default: _gameCommand = null; break;
         }
     }
 
