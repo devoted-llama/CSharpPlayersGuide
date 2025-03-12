@@ -1,37 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace RoboticInterface {
-    using Helper;
+
     class Program {
         public static void Main(string[] args) {
             Robot robot = new();
-            IRobotCommand[] commands = new IRobotCommand[3];
+            List<IRobotCommand> commands = new List<IRobotCommand>();
 
-            Console.WriteLine("Hello and welcome to the robot interface. Please input 3 commands.");
-
-            for (int i = 0; i < 3; i++) {
-                Options o = Helper.GetEnumValueFromUser<Options>();
-
-                switch (o) {
-                    case Options.on: commands[i] = new OnCommand(); break;
-                    case Options.off: commands[i] = new OffCommand(); break;
-                    case Options.north: commands[i] = new NorthCommand(); break;
-                    case Options.east: commands[i] = new EastCommand(); break;
-                    case Options.south: commands[i] = new SouthCommand(); break;
-                    case Options.west: commands[i] = new WestCommand(); break;
+            Console.WriteLine("Hello and welcome to the robot interface. Please input as many commands as you wish. When you are done, type 'stop'.");
+            string input;
+            do {
+                input = Console.ReadLine();
+                switch (input) {
+                    case "on"   : commands.Add(new OnCommand()); break;
+                    case "off"  : commands.Add(new OffCommand()); break;
+                    case "north": commands.Add(new NorthCommand()); break;
+                    case "east" : commands.Add(new EastCommand()); break;
+                    case "south": commands.Add(new SouthCommand()); break;
+                    case "west" : commands.Add(new WestCommand()); break;
                 }
-
-
-
-            }
-
+            } while(input != "stop");
             Console.WriteLine("Commands have been collected. Sending to robot.");
-
             robot.Commands = commands;
             robot.Run();
-
         }
     }
-
-    public enum Options { on, off, north, east, south, west }
 }
