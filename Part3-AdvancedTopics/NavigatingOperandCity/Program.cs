@@ -6,23 +6,33 @@ using System.Net.Http.Headers;
 BlockCoordinate startingCoords = new BlockCoordinate(4,3);
 BlockOffset offset = new BlockOffset(2,0);
 BlockCoordinate newCoords = startingCoords + offset;
-if(newCoords.Row == 6 && newCoords.Column == 3) Console.WriteLine($"Pass. Got {newCoords}."); 
-else Console.WriteLine($"Fail. Got {newCoords}.");
+Console.WriteLine(newCoords); // Should be 6,3
 
 newCoords = startingCoords + Direction.East;
-if(newCoords.Row == 4 && newCoords.Column == 4) Console.WriteLine($"Pass. Got {newCoords}."); 
-else Console.WriteLine($"Fail. Got {newCoords}.");
+Console.WriteLine(newCoords); // Should be 4,4
 
-Console.WriteLine($"{newCoords[0]}{newCoords[1]}");
+Console.WriteLine($"{startingCoords[0]},{startingCoords[1]}"); // should be 4,3
 
 try {
-    Console.WriteLine(newCoords[2]);
-} catch (Exception e){
-    Console.WriteLine(e);
+    Console.WriteLine(startingCoords[2]);
+} catch (IndexOutOfRangeException){
+    Console.WriteLine("Caught exception");
 }
 
+Console.WriteLine ((BlockOffset)Direction.South); // Should be 1,0
+
 public enum Direction {North,East,South,West};
-public record BlockOffset (int RowOffset, int ColumnOffset);
+public record BlockOffset (int RowOffset, int ColumnOffset) {
+    public static explicit operator BlockOffset(Direction d) {
+        return d switch {
+            Direction.North => new BlockOffset(-1,0),
+            Direction.East => new BlockOffset(0,1),
+            Direction.South => new BlockOffset(1,0),
+            Direction.West => new BlockOffset(0,-1),
+            _ => new BlockOffset(0,0)
+        };
+    } 
+}
 public record BlockCoordinate(int Row, int Column) {
     public static BlockCoordinate operator +(BlockCoordinate c, BlockOffset o) =>
         new BlockCoordinate(c.Row + o.RowOffset, c.Column + o.ColumnOffset);
